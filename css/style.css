@@ -1,0 +1,63 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+.wrap-info
+{
+    /* position: "absolute"; */
+    margin: 0 auto;
+    width: 300px;
+    /* display: table; */
+}
+
+#slide2  {
+    opacity: 0;
+    margin-top: -200px;
+}
+.state
+{
+    font-family: 'Sanchez', serif;
+    font-size: 400%;
+    color: #fddb77;
+}
+.percentage
+{
+    font-size: 32%;
+}
+.title
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.text
+{
+    font-size: 63%;
+    width: 320px;
+}
+.prev, .next
+{
+    border: 1px solid #333;
+    padding: 14px 20px;
+    border-radius: 50%;
+}
+.pdf
+{
+    border: 1px solid #333;
+    padding: 14px;
+    border-radius: 146px;
+    width: 93px;
+    position: relative;
+    float: right;
+    text-align: center;
+}
+#pie1{
+    position: absolute;
+    top: -44px;
+    left: 86px;
+}
+#pie2
+{
+    position: absolute;
+    right: 65px;
+    top: 63px;
+    filter: blur(4px);  
+}
