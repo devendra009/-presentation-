@@ -4,7 +4,8 @@ function draw(elementId, radiusVal) {
     var canvas = document.getElementById(elementId);
     var ctx = canvas.getContext("2d");
     
-    var colors = ['#fddb77'];
+    //var colors = ['#fddb77'];
+    var colors = ['#cccccc'];
     var angles = [1.5];
     var offset = 30;
     var beginAngle = 0;
@@ -32,7 +33,8 @@ function draw(elementId, radiusVal) {
     var canvas = document.getElementById(elementId);
     var ctx = canvas.getContext("2d");
     
-    var colors = ['#b6e480'];
+   // var colors = ['#b6e480'];
+    var colors = ['#cccccc'];
     var angles = [2];
     var offset = 60;
     var beginAngle = 1;
@@ -60,7 +62,8 @@ function draw(elementId, radiusVal) {
     var canvas = document.getElementById(elementId);
     var ctx = canvas.getContext("2d");
     
-    var colors = ['#5ebbf3'];
+    //var colors = ['#5ebbf3'];
+    var colors = ['#cccccc'];
     var angles = [1];
     var offset = 80;
     var beginAngle = 1;
@@ -96,15 +99,15 @@ $(document).ready(function() {
     // blueSmall("pie1");
       drawGreen("pie2");
       blueSmall("pie3");
-
+      
   // console.log($("#slide1").length);
 
-   var tl = new TimelineMax();
+  // var tl = new TimelineMax();
 
   
-  TweenMax.to($("#slide1"), 1, {y:-200, autoAlpha:0, ease:Power1.easeOut});
-  TweenMax.to($("#pie1"), 1, {x:-200});
-  TweenMax.to($("#slide2"), 2, {autoAlpha:1, ease:Power1.easeIn}, "+=0.15");
+  // TweenMax.to($("#slide1"), 1, {y:-200, autoAlpha:0, ease:Power1.easeOut});
+  // TweenMax.to($("#pie1"), 0.5, { rotation:-10, y:-40, x:-70}); //x:-220, y:100,
+  // TweenMax.to($("#slide2"), 2, {autoAlpha:1, ease:Power1.easeIn}, "+=0.15");
 
 // var doc = new jsPDF();
 // var specialElementHandlers = {
@@ -124,11 +127,17 @@ $(document).ready(function() {
 });
 
 $("#download").click (function() {
- // only jpeg is supported by jsPDF
-//var imgData = my.toDataURL("image/jpeg", 1.0);
-var pdf = new jsPDF();
+  html2canvas(document.querySelector(".presentation")).then(canvas => {
+    document.body.appendChild(canvas)
 
-pdf.addImage(imgData, 'JPEG', 0, 0);
-pdf.save("download.pdf");
+    var imgData = canvas.toDataURL("image/png", 1.0);
+    var pdf = new jsPDF();
+  
+    pdf.addImage(imgData, 'png', 0, 0);
+    pdf.save("download.pdf");
+  });
+
+
+
  });
 
