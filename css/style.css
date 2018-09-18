@@ -2,17 +2,29 @@ body{
     font-family: 'Lato', sans-serif;
     font-size: 20px;
 }
-.wrap-info
+#slide1.wrap-info
 {
-    /* position: "absolute"; */
-    margin: 0 auto;
+    margin: 180px auto;
     width: 300px;
-    /* display: table; */
 }
-
-#slide2  {
+#slide2.wrap-info  {
     opacity: 0;
+    /* margin-top: 0px;
+    margin: 0px auto; */
+    width: 300px;
+    margin-top: -375px;
+    margin-left: 533px;
+    /* display: none;   */
+    
+}
+#slide3.wrap-info  {
+    opacity: 0;
+    /* margin-top: 0px;
+    margin: 0px auto; */
+    width: 300px;
     margin-top: -200px;
+    margin-left: 533px;
+    /* display: none;  */
 }
 .state
 {
@@ -20,44 +32,186 @@ body{
     font-size: 400%;
     color: #fddb77;
 }
+.state1
+{
+    font-family: 'Sanchez', serif;
+    font-size: 400%;
+    color: #b6e480;
+}
+.state2
+{
+    font-family: 'Sanchez', serif;
+    font-size: 400%;
+    color: #5ebbf3;
+}
 .percentage
 {
     font-size: 32%;
 }
 .title
 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Segoe UI Local';
+    font-weight: 400;
+    font-size: 33px;
+    margin-top: 0px;
+    margin-bottom: 12px;
 }
 .text
 {
     font-size: 63%;
     width: 320px;
+    color: #666666;
+}
+.controls
+{
+    position: absolute;
+    top: 431px;
+    left: 543px;
+    width: 300px;
 }
 .prev, .next
 {
     border: 1px solid #333;
     padding: 14px 20px;
     border-radius: 50%;
+    cursor: pointer;
 }
+.next {
+    margin-left: -23px;
+    transition: all 0.3s ease;
+}
+.controls:hover .next {
+    margin-left: 0;
+  }
 .pdf
 {
     border: 1px solid #333;
-    padding: 14px;
+    padding: 13px;
     border-radius: 146px;
     width: 93px;
     position: relative;
     float: right;
     text-align: center;
+    float: right;
+    margin-top: -7px;
+    font-size: 15px;
 }
 #pie1{
     position: absolute;
-    top: -44px;
-    left: 86px;
+    top: 109px;
+    left: 106px;
+}
+#pie1_1
+{
+    position: absolute;
+    right: 10px;
+    bottom: -191px;
 }
 #pie2
 {
     position: absolute;
     right: 65px;
-    top: 63px;
+    bottom: -35px;
     filter: blur(4px);  
 }
+#pie3
+{
+    top: 175px;
+    right: 417px;
+    position: absolute;
+}
+#pie4
+{
+    top: -77px;
+    right: 70px;
+    position: absolute;
+}
+#pie5
+{
+    bottom: -56px;
+    left: 70px;
+    position: absolute;
+}
+#pie5_1
+{
+    position: absolute;
+    right: -70px;
+    top: 247px;
+    display: none;
+}
+#pie6
+{
+    top: -46px;
+    left: 70px;
+    position: absolute;
+    filter: blur(4px);  
+}
+#pie6_1{
+    position: absolute;
+    bottom: -200px;
+    transform: rotate(90deg);
+    right: 60px;
+    /* display: none; */
+    }
+.support
+{
+    width: 100%;
+    background-color: #fff;
+    height: 200px;
+    position: relative;
+}
+.presentation
+{
+    width: 1366px;
+    height: 660px;
+    border: 1px solid #e5e5e5;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 35px;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+    position: relative;
+}
+.vertical-text {
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+}
+.text1, .text2, .text3
+{
+    position: absolute;
+    left: 295px;
+    top: 375px;
+    font-family: 'Sanchez', serif;
+    color: #e4c057;
+}
+.text1
+{
+    color: #e4c057;
+}
+.text2
+{
+    color: #b6e480;
+    opacity: 0;
+}
+.text3
+{
+    color: #5ebbf3;
+    opacity: 0;
+}
+/* Segoe UI font */
+
+  @font-face {
+    font-family: 'Segoe UI Local';
+    src: local("Segoe UI");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Segoe UI Web (West European)';
+    src: url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-regular.woff2") format("woff2"), 
+    url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  } 
+  /* Segoe UI font */
