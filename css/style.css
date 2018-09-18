@@ -80,7 +80,7 @@ body{
     margin-left: -23px;
     transition: all 0.3s ease;
 }
-.controls:hover .next {
+.btn-wrapper:hover .next {
     margin-left: 0;
   }
 .pdf
@@ -95,6 +95,7 @@ body{
     float: right;
     margin-top: -7px;
     font-size: 15px;
+    cursor: pointer;
 }
 #pie1{
     position: absolute;

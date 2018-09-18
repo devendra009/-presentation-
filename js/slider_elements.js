@@ -73,6 +73,30 @@ class SliderElement {
 		ctx.fill();
     }
 
+    screenshot() {
+        $(".next").css('transition','none');
+        html2canvas(document.querySelector(".presentation"))
+        .then(canvas => {
+            let doc = null;
+            var imgData = canvas.toDataURL("image/png", 1.0);
+            
+            if (canvas.width > canvas.height) {
+                doc = new jsPDF('l', 'mm', [canvas.width, canvas.height]);
+            } else {
+                doc = new jsPDF('p', 'mm', [canvas.height, canvas.width]);
+            }
+
+            doc.addImage(imgData, 'png',1, 1, 1300, 600);
+            doc.save("download.pdf");
+            
+            $(".next").css('transition', 'all 0.3s ease');
+        })
+        .catch((err) => {
+            console.error(err);
+            $(".next").css('transition', 'all 0.3s ease');
+        });
+    }
+
     _drawElement() {
         this.drawPie(this.pie1[0], '#fddb77', -50, 29.85, 1.4, 250, 180);
         this.drawPie(this.pie1_1[0], '#fddb77', -50, 29.85, 1.4, 250, 180);
